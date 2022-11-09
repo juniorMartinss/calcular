@@ -1,0 +1,215 @@
+:root{
+    /*Backgrounds*/
+    --Background-pagina: hsla(196, 17%, 26%, 0.585);
+    --Background-calculadora:white;
+    --Background-input-resultado: hsla(223, 61%, 52%, 0.361);
+    
+    /*Botões*/
+    --Background-botao-azul:hsl(28, 16%, 65%);
+    --Sombra-botao-azul: hsl(224, 28%, 35%);
+    --vermelho-seta: hsl(6, 63%, 61%);
+    --Sombra-vermelho: hsl(28, 16%, 65%);
+    --Background-botao-claro: white;
+    --Sombra-botao-claro: hsl(28, 16%, 65%);
+    
+    /*Texto*/
+    --Cor-fonte-botoes: hsl(221, 14%, 31%);
+    --Branco-titulo: hsl(0, 0, 100%);
+    
+    /*Tamanho fonte numero*/
+    --Font-size-numeros: 36px;
+    }
+    
+    * {
+        box-sizing: border-box;
+      }
+    
+    body{
+        background-color: var(--Background-pagina);
+        font-family: 'League Spartan', sans-serif;
+    }
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    
+    .titulo{
+        font-size: 54px;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 10px;
+    }
+    
+    .container-inputs{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .conta-atual{
+        background-color: var(--Background-input-resultado);
+        color: white;
+        padding: 1.0em 1em;
+        width: 550px;
+        border-radius: 0px 0px 10px 10px;
+        font-size: 22px;
+        outline: 0;
+        border-radius:10px;
+        border: none;
+    }
+    
+    .conta-atual::placeholder{
+        color: white;
+        font-family: 'League Spartan', sans-serif;
+        
+    }
+    
+    .input-atual-memoria:focus-within{
+        outline: 2px solid var(--vermelho);
+    }
+    
+    .resultado{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    
+    .resultado-grande{
+        background-color: var(--Background-input-resultado);
+        color: white;
+        padding: 0.7em 1em;
+        width: 550px;
+        height: 53px;
+        margin: 10px 0px 5px 0px;
+        border-radius: 10px 0px 0px 10px;
+        font-size: 22px;
+        outline: 0;
+        border-radius: 10px;
+    }
+    
+    .resultado-seta{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .seta-up{
+        background-color: var(--Sombra-vermelho);
+        color: white;
+        height: 53px;
+        width: 50px;
+        margin: 10px 0px 5px 0px;
+        border-radius: 0px 10px 10px 0px;
+        font-size: 30px;
+        text-align: center;
+        outline: 0;
+        cursor: pointer;
+        font-weight: bold;
+        justify-self: center;
+    }
+    
+    .seta-up:hover{
+        background-color: var(--vermelho);
+    }
+    
+    .resultado-grande::placeholder{
+        color: white;
+        font-family: 'League Spartan', sans-serif;
+    }
+    
+    .resultado-aproximado{
+        background-color: var(--Background-input-resultado);
+        color: white;
+        padding: 0.7em 1em;
+        width: 110px;
+        height: 53px;
+        margin: 10px 0px 5px 0px;
+        border-radius: 10px;
+        font-size: 22px;
+        outline: 0;
+        text-align: center;
+    }
+    
+    .resultado-aproximado::placeholder{
+        color: white;
+        font-family: 'League Spartan', sans-serif;
+    }
+    
+    .aproximado{
+        font-size: 26px;
+        color: white;
+        background-color: var(--Background-botao-azul);
+        width: 40px;
+        border-radius: 10px;
+        box-shadow: 0px 3px 0px 0px var(--Sombra-botao-azul);
+        text-align: center;
+        padding: 6px 0px 0px 0px;
+    }
+    
+    .container-botoes{
+        background-color: var(--Background-calculadora);
+        border-radius: 10px;
+        padding: 10px;
+        width: 550px;
+    }
+    
+    .linha{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .botao{
+        background-color: var(--Background-botao-claro);
+        font-size: var(--Font-size-numeros);
+        color: var(--Cor-fonte-botoes);
+        width: 75px;
+        height: 40px;
+        margin: 10px;
+        border-radius: 10px;
+        vertical-align: bottom;
+        text-align: center;
+        font-weight: 700;
+        box-shadow: 0px 3px 0px 0px var(--Sombra-botao-claro);
+        cursor: pointer;
+    }
+    
+    .botao:hover{
+        transform: scale(1.05);
+    }
+    
+    .botao-clear{
+        background-color: var(--Background-botao-azul);
+        color: white;
+        font-size: 18px;
+        box-shadow: 0px 3px 0px 0px var(--Sombra-botao-azul);
+    }
+    
+    .botao-del{
+        background-color: var(--Background-botao-azul);
+        color: white;
+        font-size: 18px;
+        box-shadow: 0px 3px 0px 0px var(--Sombra-botao-azul);
+    }
+    
+    .botao-eq{
+        background-color: var(--vermelho);
+        color: white;
+        box-shadow: 0px 3px 0px 0px var(--Sombra-vermelho);
+    }
+    
+    .botao-semi{
+        background-color: var(--Background-botao-azul);
+        color: white;
+        font-size: 23px;
+        box-shadow: 0px 3px 0px 0px var(--Sombra-botao-azul);
+        
+    }
